@@ -5,13 +5,9 @@ import {
 } from "../../../../components/movie-info/movie-info";
 import { MovieVideos } from "../../../../components/movie-videos/movie-videos";
 
-type Props = {
-  params: {
-    id: string;
-  };
-};
+type Params = Promise<{ id: string }>;
 
-export async function generateMetadata({ params }: Props) {
+export async function generateMetadata({ params }: { params: Params }) {
   const { id } = await params;
   const movie = await getMovie(id);
   return {
@@ -19,7 +15,7 @@ export async function generateMetadata({ params }: Props) {
   };
 }
 
-export default async function MovieDetail({ params }: Props) {
+export default async function MovieDetail({ params }: { params: Params }) {
   const { id } = await params;
   return (
     <div>
