@@ -28,7 +28,12 @@
 
 @media (max-width: 768px) {
   .container {
+    display: flex;
+    flex-direction: column;
     gap: 15px;
+  }
+  .container img {
+    width: 50%;
   }
   .container h1 {
     font-size: 25px;
