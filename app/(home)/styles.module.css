@@ -10,7 +10,7 @@
 @media (max-width: 768px) {
   .container {
     grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
+    gap: 14px;
     font-size: 14px;
   }
 }
